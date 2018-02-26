@@ -4,14 +4,55 @@
         {
             "id": "tonybaloney",
             "name": "Anthony Shaw",
+            "bio": "Anthony Shaw is the Group Director of Innovation and Talent Development at Dimension Data, an NTT company. Anthony is an open-source advocate, member of the Apache Software Foundation and Python Software Foundation and active contributor to over 20 open-source projects including Apache Libcloud and SaltStack. At Dimension Data, Anthony is driving digital transformation for Dimension Data’s global clients across 50 countries and 30,000 employees. Key initiatives are software skills, automation, DevOps and Cloud. Anthony is based in Sydney, Australia and blogs about skills, software and automation to 170,000 readers annually.",
             "github_username": "tonybaloney",
+            "gravatar_url": "https://gravatar.com/avatar/97015b6d8b78f4695250139ad5c5e752?s=300",
             "homepage_url": "https://tonybaloney.github.com",
+            "linkedin_url": "https://www.linkedin.com/in/anthonypshaw/",
+            "blog_url": "https://medium.com/@anthonypjshaw",
+            "twitter_handle": "anthonypjshaw",
+            "chosen_charities": ["qhubeka", "zimbopy"],
             "services":
                 [
                     {
-                        "offering": "Port my Python module to Python 3 (<5000 LOC)",
-                        "description": "Having trouble moving code to Python 3 or simply don't have the experience? Call on @tonybaloney to migrate your code to support Python 3.5 and above. @tonybaloney developed the 'Migrating from Python 2 to 3' course at Pluralsight, leading developers all over the world to port their code to the newest version of Python.",
+                        "offering": "Move a Python PyPi dependency to Python 3",
+                        "description": "Having trouble moving code to Python 3 because you're being blocked by a third party dependency? I'll fix it for you.. assuming it's not 1million lines of code!",
+                        "price_usd": 1000.00
+                    },
+                    {
+                        "offering": "Port my Python module to Python 3 (<1000 LOC)",
+                        "description": "Having trouble moving code to Python 3 or simply don't have the experience? Call on @tonybaloney to migrate your code to support Python 3.5 and above. @tonybaloney developed the 'Migrating from Python 2 to 3' course at Pluralsight, leading developers all over the world to port their code to the newest version of Python. On top of that, 1000's of contributions to over 30 OSS projects on Python 2/3 compatible code.",
+                        "price_usd": 500.00
+                    },
+                    {
+                        "offering": "Port my Python module to Python 3 (<500 LOC)",
+                        "description": "Another option for smaller projects",
                         "price_usd": 250.00
+                    },
+                    {
+                        "offering": "Add a Tox configuration to a project",
+                        "description": "Want to use Tox to test multiple versions of Python simultaneously? I'll set it up for you.",
+                        "price_usd": 50.00
+                    },
+                    {
+                        "offering": "Setup continuous testing with TravisCI",
+                        "description": "Want your tests to run on every branch and against multiple versions of Python? I'll configure it for you and throw in code-coverage automation.",
+                        "price_usd": 50.00
+                    },
+                    {
+                        "offering": "Write <=100 unit tests for a project",
+                        "description": "Unit testing can be tedious! Anthony can help this fun activity, which he really enjoys doing.",
+                        "price_usd": 250.00
+                    },
+                    {
+                        "offering": "Career advice mentoring session (60 min)",
+                        "description": "Ask me anything, how to write a resume, how to get introduced to top companies, the best way to get a promotion, should you stay or leave your company, how to stop being pidgeon-holed? See my linkedin page.",
+                        "price_usd": 100.00
+                    },
+                    {
+                        "offering": "Talk about mental health challenges",
+                        "description": "Just DM me on Twitter. They are open.",
+                        "price_usd": "Always free"
                     }
                 ]
         }

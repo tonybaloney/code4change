@@ -60,8 +60,9 @@
                         <a href="#donations">Charity Partners</a>
                     </li>
                     <li>
-                        <a href="#developers">Contributing Developers</a>
+                        <a href="#contributing">Contributing</a>
                     </li>
+                    <!--
                     <li>
                         <a href="https://twitter.com/anthonypjshaw"><i class='fa fa-2x fa-twitter'></i></a>
                     </li>
@@ -71,6 +72,7 @@
                     <li>
                         <a href="https://github.com/tonybaloney"><i class='fa fa-2x fa-instagram'></i></a>
                     </li>
+                    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -85,9 +87,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Help for Help</h1>
+                        <h1>Code for change</h1>
                         <hr class="small">
-                        <span class="subheading">Help with your projects in turn for a donation to a good cause</span>
+                        <span class="subheading">Help with your software projects in turn for a donation to a good cause</span>
                     </div>
                 </div>
             </div>
@@ -103,10 +105,15 @@
                 <div class="col-lg-10 col-md-10">
                     <h1><a id="what"></a>How this works</h1>
                     <p class="post-subtitle">
-                        This site contains a list of <a href="#services">services</a> offered by some willing <a href="#developers">developers</a>. <br/>
+                        This site contains a list of <a href="#services">services</a> offered by some willing developers. <br/>
                         All of the services here are in exchange for a monetary donation to a nominated charity. Donations are made <b>directly to the charity</b>.
                         <br />
                         For help on donating, see the <a href="#donations-faq">donations FAQ</a>.
+                    </p>
+                    <h2>Why?</h2>
+                    <p class="post-subtitle">
+                        Sponsored runs are a great way to raise money but so many companies spend money on day-to-day software activities. Get access to experts whilst helping
+                        a good cause? What else could you want!
                     </p>
                 </div>
             </div>
@@ -118,6 +125,53 @@
             <div ng-repeat="developer in developers">
                 <h1>Offerings by <a ng-href='developer.homepage_url'>{{developer.name}}</a></h1>
                 <div class="row">
+                    <div class="col-md-2">
+                        <img ng-src='{{developer.gravatar_url}}' style="border-radius: 50%;" width="100%"/>
+                    </div>
+                    <div class="col-md-9 col-md-offset-1">
+                        {{developer.bio}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a ng-href="https://twitter.com/{{developer.twitter_handle}}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-href="https://github.com/{{developer.github_username}}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-href="{{developer.blog_url}}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-href="{{developer.linkedin_url}}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                <div class="row">
+
                     <div class="post-preview" ng-repeat="service in developer.services">
                         <h2 class="post-title">
                             <img src="https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/Python_logo-256.png" width=50/> {{service.offering}}
@@ -126,16 +180,18 @@
                             {{service.description}}
                         </p>
                         <p class="post-meta">
-                            <h3 class="donation-value"><a href="#donations-faq">${{service.price_usd}}</a></h3>
+                            <h3 class="donation-value"><a href="#donations-faq">${{service.price_usd}} USD</a></h3>
                         </p>
                     </div>
                     <hr>
                 </div>
             </div>
         </div>
+        <div class="container-fluid intro-header" style="background-image: url('http://qhubeka.org/wp-content/uploads/2017/07/hero.jpg'); min-height:400px">
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-md-12">
                     <h1><a id="donations"></a>Charity Partners</h1>
                     <p class="post-subtitle">
                         All services on this page are available through a donation to one of the nominated charities by contacting the developer.
@@ -143,14 +199,77 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-md-offset-4 center">
+                <div class="col-md-8 center">
                     <h2>ZimboPy</h2>
+                    <p class="post-meta">
+                    ZimboPy is an organic, on-the-ground effort by local Python developers in the Harare. Our aim is to advance the cause of women in tech in Zimbabwe.
+                    <br/>
+                    We work in community centers, universities, high schools and tech hubs to make programming accessible to girls regardless of their socio-economic status or past experience with computers.
+                    <br/>
+                    In Zimbabwe LESS than 1 in 5 students enrolled in Computer Science programs at university level are women or girls. 
+                    In the developing world women account for less than 20% of ICT specialists. [ZimboPy] want to change that by giving girls 
+                    the tools to enter the tech world confidently. <br/>
+                    </p>
 
                     <a href="https://www.zimbopy.com/donate">Donate to ZimboPy</a>
                 </div>
+                <div class="col-md-4 ">
+                    <img width="100%" src="https://static.wixstatic.com/media/dfaaa3_3eb98408210048c584a478bc4663d985~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_904,h_603,al_c,q_85,usm_0.66_1.00_0.01/dfaaa3_3eb98408210048c584a478bc4663d985~mv2_d_5184_3456_s_4_2.webp" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img width="100%" src="https://beyondsport.org/media/3800/qhubeka-bike.jpg" />
+                </div>
+                <div class="col-md-6 center">
+                    <h2>Qhubeka</h2>
+                    <p class="post-meta">
+                    Change a life with a bicycle.
+                    <br/>
+                    Bicycles are an effective way to address the needs of school children in South Africa.
+                    <br/>
+                    12 million of the country’s 16 million school-going children walk to and from school and 500,000 of these walk more than two hours to school and two hours back. With a Qhubeka Bicycle, a child’s commute time is reduced by up to 75%.
+                    <br/>
+                    Why is that important? Their access to simple transport to school impacts an education. Imagine how tired you would be after walking 2 hours in the morning. Lessons like Science and Mathematics are often scheduled in the mornings and children
+                    often don't attend because they can't start walking until it gets light for safety. Even when they do get to school, they can be so tired from walking that their concentration suffers.
+                    A bicycle costs around $250USD and becomes the property of the child. They get rewarded the bicycle on a good study record and the bicycles are built and maintained by the local community.
+                    The goal is get to get more students to finish school and study safely.
+                    </p>
+                    <a href="http://qhubeka.org/how-to-help/donate/">Donate to Qhubeka</a>
+                </div>
+                
             </div>
         </div>
-
+        <div class="container">
+            <a id="contributing"></a>
+            <h1>Contributing to code for change</h1>
+            <div class="row">
+                <div class="post-preview" >
+                    <p>
+                        Want to offer your skills too? Registering is as easy as raising a pull request! Just fork
+                        <a href="https://github.com/tonybaloney/code4change">this project</a>.
+                    </p>
+                    <p>
+                        Want to operate your own version of this? It's MIT licensed so just fork the project and publish it yourself. 
+                        No credit needs to be given to the original author(s).
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <a id="donations-faq"></a>
+            <h1>How this works</h1>
+            <div class="row">
+                <div class="post-preview" >
+                    <ol>
+                        <li>Select a service and a developer</li>
+                        <li>Contact them and notify them the requirements</li>
+                        <li>Select a charity and donate, keeping a receipt. <i>Some countries, e.g. USA will accept this as a tax-deductable nomination.</i></li>
+                        <li>The developer will complete the work</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
     <!-- Footer -->
     <footer>
@@ -163,6 +282,14 @@
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tonybaloney/code4change">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
