@@ -1,0 +1,19 @@
+{
+    "developers":
+    [
+        {
+            "id": "tonybaloney",
+            "name": "Anthony Shaw",
+            "github_username": "tonybaloney",
+            "homepage_url": "https://tonybaloney.github.com",
+            "services":
+                [
+                    {
+                        "offering": "Port my Python module to Python 3 (<5000 LOC)",
+                        "description": "Having trouble moving code to Python 3 or simply don't have the experience? Call on @tonybaloney to migrate your code to support Python 3.5 and above. @tonybaloney developed the 'Migrating from Python 2 to 3' course at Pluralsight, leading developers all over the world to port their code to the newest version of Python.",
+                        "price_usd": 250.00
+                    }
+                ]
+        }
+    ]
+}
